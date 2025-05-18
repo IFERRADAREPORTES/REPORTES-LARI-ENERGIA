@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>INDICADORESLARI-ENERGIA</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-message {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #333;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .logout-link {
+            margin-left: 8px;
+            font-size: 0.8rem;
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">
+        Bienvenido, {{ usuario }}
+        <a href="{{ url_for('logout') }}" class="logout-link">(Cerrar sesión)</a>
+    </div>
+    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiY2ZkYmFmNjAtZTBhOC00ZGEzLWFmYzUtYWMyZDJmM2Q0M2ZlIiwidCI6IjZiMTY5NjM0LWZkY2EtNGM5Ny1hZDBmLWEyMjk0YzcxODdhNyIsImMiOjR9"></iframe>
+</body>
+</html>
+
+
